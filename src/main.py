@@ -7,10 +7,17 @@ Model Context Protocol (MCP)に準拠したRAG機能を持つPythonサーバー
 
 import sys
 import os
+import io
 import argparse
 import importlib
 import logging
 from dotenv import load_dotenv
+
+# Force UTF-8 for stdin/stdout on Windows (default is CP932, which corrupts Japanese)
+if hasattr(sys.stdin, 'buffer'):
+    sys.stdin = io.TextIOWrapper(sys.stdin.buffer, encoding='utf-8')
+if hasattr(sys.stdout, 'buffer'):
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', line_buffering=True)
 
 from .mcp_server import MCPServer
 from .rag_tools import register_rag_tools, create_rag_service_from_env

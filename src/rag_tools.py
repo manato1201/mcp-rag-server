@@ -268,11 +268,8 @@ def create_rag_service_from_env() -> RAGService:
     embedding_generator = EmbeddingGenerator(model_name=embedding_model)
     vector_database = VectorDatabase(
         {
-            "host": postgres_host,
-            "port": postgres_port,
-            "user": postgres_user,
-            "password": postgres_password,
-            "database": postgres_db,
+            "chroma_path":   os.environ.get("CHROMA_PATH",   "./data/chroma"),
+            "embedding_dim": os.environ.get("EMBEDDING_DIM", "1024"),
         }
     )
 
