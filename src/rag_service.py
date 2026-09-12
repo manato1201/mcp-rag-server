@@ -182,7 +182,7 @@ class RAGService:
 
             # ベクトル検索
             self.logger.info(f"クエリ '{query}' でベクトル検索を実行しています...")
-            results = self.vector_database.search(query_embedding, limit)
+            results = self.vector_database.search(query_embedding, limit, query_text=query)
 
             # 前後のチャンクも取得する場合
             if with_context and context_size > 0:

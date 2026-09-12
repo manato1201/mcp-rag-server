@@ -176,3 +176,5 @@ cython_debug/
 .DS_Store
 data/processed/file_registry.json
 data/processed/*.md
+# ChromaDB runtime data (generated, not source)
+data/chroma/
