@@ -178,3 +178,8 @@ data/processed/file_registry.json
 data/processed/*.md
 # ChromaDB runtime data (generated, not source)
 data/chroma/
+
+# Claude Code の承認済みコマンドには秘密情報が残ることがある(2026-11-09 追加)
+.claude/settings.local.json
+.env.*
+!.env.example
