@@ -1,5 +1,7 @@
 # MCP RAG Server
 
+> **【廃止】2026-11 に開発を終了しました(GitHub ではアーカイブ)。** 自分では使っていません。ローカル RAG は [DevelopmentRAGEnvironment](https://github.com/manato1201/DevelopmentRAGEnvironment) に移しました(ベクトル・検索・MCP を Cloudflare 側にも置く構成)。新しく使う場合は、元の [karaage0703/mcp-rag-server](https://github.com/karaage0703/mcp-rag-server)(MIT)か、DevelopmentRAGEnvironment を使ってください。コードと履歴は、参考として残します。
+
 ローカルの文書(Markdown・テキスト・PDF・Word・PowerPoint)を索引にして、**AI アプリ(Claude Desktop など)が、質問のたびに関連する断片を検索できる**ようにする MCP サーバー。
 すべてこの PC の中で動く(文書もベクトルも、外へ送らない)。
 
